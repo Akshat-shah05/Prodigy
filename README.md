@@ -2,6 +2,8 @@ Heyy, I'm working on getting it deployed. Going to be available to use very very
 
 # Prodigy: 🎵🌟 All Your AI Generation Needs Packed into one SaaS Platform 🎨🔥
 
+<img width="1136" alt="Prodigy" src="https://github.com/Akshat-shah05/Prodigy/assets/133422818/74d251dc-06aa-4e24-9602-010e0d45dd57">
+
 ## Inspiration 💡💭
 The inspiration for this project was really just wanting an all-in-one, easy-to-use tool to handle every AI generation need I'd ever have. I found it pretty time-consuming to have to use different AI platforms each for their own specific purpose. I'm a programmer, and the best way to solve this problem was simply to code up my own solution. Hence, Prodigy was born, an application leveraging OpenAI and ReplicateAI to package all of my generative AI needs into one beautifully made platform. 
 
@@ -41,3 +43,4 @@ The inspiration for this project was really just wanting an all-in-one, easy-to-
 - Adding more generative models
 - Maybe creating an actual application version of this natively (on mobile with react native or flutter)
 - Getting it all up and deployed so people can use it
+
