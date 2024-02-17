@@ -1,4 +1,5 @@
 Heyy, I'm working on getting it deployed. Going to be available to use very very soon. Stay Tuned 👀
+Update: I have run out of credits for the OpenAI Api, not sure if I'm going to spend the money to get more credits
 
 # Prodigy: 🎵🌟 All Your AI Generation Needs Packed into one SaaS Platform 🎨🔥
 
