@@ -1,5 +1,6 @@
 "use client"
 import * as z from "zod"
+import axios from 'axios'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Heading } from "@/components/heading" 
 import { MessageSquare } from "lucide-react"
@@ -8,8 +9,14 @@ import { formSchema } from "./constants"
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
+import { ChatCompletionMessageParam } from "openai/resources/index.mjs" 
+import { useState } from "react"
 
 const ConversationPage = () => {
+    const router = useRouter()
+    const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -20,7 +27,31 @@ const ConversationPage = () => {
     const isLoading = form.formState.isSubmitting;
 
     const onSubmit = async(values: z.infer<typeof formSchema>) => {
-        console.log(values)
+        try {
+            const userMessage: ChatCompletionMessageParam = {
+                role: "user",
+                content: values.prompt
+            }
+            const newMessages = [...messages, userMessage]
+
+            const response = await axios.post("/api/conversation", {
+                messages: newMessages,
+            });
+
+            setMessages((current) =>  [...current, userMessage, response.data])
+            
+            form.reset()
+            console.log(messages)
+
+
+        } catch (error: any) {
+            // Will add pro subscription thing here 
+
+            console.log("didnt work", error);
+        } finally {
+            router.refresh()
+        }
+
     }
 
     return (
@@ -63,7 +94,9 @@ const ConversationPage = () => {
                     </Form>
                 </div>
                 <div className="space-y-4 mt-4 ">
-                    Messages Content
+                    <div className="flex flex-col-reverse gap-y-4">
+                        
+                    </div>
                 </div>
             </div>
         </div>
