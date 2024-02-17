@@ -4,7 +4,7 @@ Update: I have run out of credits for the OpenAI Api, not sure if I'm going to s
 # Prodigy: 🎵🌟 All Your AI Generation Needs Packed into one SaaS Platform 🎨🔥
 
 <img width="1136" alt="Prodigy" src="https://github.com/Akshat-shah05/Prodigy/assets/133422818/74d251dc-06aa-4e24-9602-010e0d45dd57">
-<img width="1136" alt="Codegen" src="https://github.com/Akshat-shah05/Prodigy/public/codegen.png">
+![image](https://github.com/Akshat-shah05/Prodigy/assets/133422818/8854a57f-7647-4a4b-95d2-077001e6a5bb)
 
 ## Inspiration 💡💭
 The inspiration for this project was really just wanting an all-in-one, easy-to-use tool to handle every AI generation need I'd ever have. I found it pretty time-consuming to have to use different AI platforms each for their own specific purpose. I'm a programmer, and the best way to solve this problem was simply to code up my own solution. Hence, Prodigy was born, an application leveraging OpenAI and ReplicateAI to package all of my generative AI needs into one beautifully made platform. 
